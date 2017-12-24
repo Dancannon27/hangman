@@ -1,39 +1,24 @@
 
+const Letter = function(ltr) {
+    //store...
+    this.letter = ltr;
+    //flag
+    this.appear = false;
 
-
-//shows the spaces of the random movie to be guessed
-Display = function(word){
-    this.wordArray = word.split(""),
-    this.arrayOfDashes = [],
-    this.updated,
-    this.firstDisplay = function(){
-        for(i = 0; i < wordArray.length; i++){
-            if(this.wordArray[i] === " "){
-                x = "";
-                this.arrayOfDashes.push(x);
-            } else {
-                x = "_";
-                this.arrayOfDashes.push(x);
-            }
+    this.letterRender = function() {
+        if (this.letter === " "){
+            //checks...
+            this.appear = true;
+            return " ";
+        } if (this.appear === false) {
+            return " _";
+        } else {
+            
+            return this.letter;
         }
-            console.log(this.arrayOfDashes.join(""));
-    },
-    this.updatedDisplay = function(letter) {
-        for (i = 0; i < wordArray.length; i++){
-            if (letter === this.wordArray[i]) {
-                this.arrayOfDashes.splice(i, 1, letter);
-            }
-        }
-        this.updated = this.arrayOfDashes.join("");
-        console.log(this.updated);
-    },
-    this.checkForWin = function(){
-		console.log('victory check complete')
-		console.log('entered word = ' + this.arrayOfDashes.join(''));
-		console.log(word);
-		if(this.arrayOfDashes.join('') == word){
-			victory = true;
-			return victory;
+        //console.log(this.letter.join(" "));
+        };
+        
+    };
 
-		}
-}
+module.exports = Letter;

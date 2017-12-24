@@ -9,6 +9,7 @@
   "author": "LiriHW",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^4.0.1"
+    "inquirer": "^4.0.1",
+    "is-letter": "^1.1.1"
   }
 }
