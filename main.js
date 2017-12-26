@@ -15,7 +15,7 @@ const hangman = {
             startGame: function(){
                 var x = this;
                 if (x.guessedLetters.length > 0) {
-                    x.guessesLetters = [];
+                    x.guessedLetters = [];
                 }
 
                 inquirer.prompt([{
@@ -102,7 +102,6 @@ const hangman = {
                     console.log("***************************");
 
                     console.log("Letters Guessed: " + x.guessedLetters);
-                    console.log("***************************");
 
             } else {
 
@@ -122,7 +121,6 @@ const hangman = {
                     console.log(x.currentWord.wordRender());
                     console.log("***************************");
                     console.log("Letters Guessed: " + x.guessedLetters);
-                    console.log("***************************");
                 }
             }
             if (x.guessesRemaining > 0 && x.currentWord.wordFound === false) {
@@ -131,8 +129,6 @@ const hangman = {
                 console.log("GAME OVER!");
                 console.log("***************************");
                 console.log("The Movie you were guessing was: " + x.currentWord.word);
-                console.log("***************************");
-                
                 x.startGame();
             }
 
